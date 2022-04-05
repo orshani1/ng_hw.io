@@ -1,0 +1,13 @@
+
+
+<form #myForm="ngForm" (ngSubmit)="handleSubmit(myForm.value.cars)">
+    <label for="cars">Choose a car:</label>
+    <select ngModel #name="ngModel" name="cars" id="cars">
+      <option value="volvo" #name>Volvo</option>
+      <option value="opel"  #name>Opel</option>
+      <option value="audi"  #name name="name">Audi</option>
+    </select>
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+  <app-child [item]="car"></app-child>
